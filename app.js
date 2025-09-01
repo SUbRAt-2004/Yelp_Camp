@@ -20,7 +20,7 @@ const MongoStore = require('connect-mongo');
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campground');
 const reviewRoutes = require('./routes/reviews');
-//const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL;
 
 const { storeReturnTo } = require('./middleware'); // <-- added
 
@@ -29,7 +29,7 @@ const { storeReturnTo } = require('./middleware'); // <-- added
 // .then(() => console.log("Database connected"))
 // .catch(err => console.log("Connection error:", err));
 
-const dbUrl = 'mongodb://127.0.0.1:27017/Yelp-Camp';
+//const dbUrl = 'mongodb://127.0.0.1:27017/Yelp-Camp';
 mongoose.connect(dbUrl)
     .then(() => console.log("Database connected"))
     .catch(err => console.log("Connection error:", err));
